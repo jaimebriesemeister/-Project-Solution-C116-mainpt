@@ -1,51 +1,51 @@
-# importing modules from flask library
+# importando os módulos da biblioteca flask
 from flask import Flask , render_template
 
-# creating instance of class Flask, by providing __name__ keyword as argument
+# criando instância da classe Flask, fornecendo a palavra-chave __name__ como argumento
 app = Flask(__name__)
 
-# write the routes using decorator functions
-# default route or 'URL'
+# escreva as rotas usando funções de decorador
+# rota padrão ou 'URL'
 @app.route("/")
 def home():
 
-    name = "Alex" # write your name
-    age = "12" # write your age
+    name = "Alex" # escreva seu nome
+    age = "12" # escreva sua idade
 
     return render_template('index.html' , name = name , age = age)
 
-# define the route to father webpage
+# defina a rota para a página do pai
 @app.route("/father")
 def father():
 
-    name = "Vicktor" # write your name
-    age = "40" # write your age
+    name = "Vítor" # escreva seu nome
+    age = "40" # escreva sua idade
 
     return render_template('father.html' , name = name , age = age)
 
-# define the route to mother webpage
+# defina a rota para a página da mãe
 @app.route("/mother")
 def mother():
 
-    name = "Erica" # write your name
-    age = "37" # write your age
+    name = "Erica" # escreva seu nome
+    age = "37" # escreva sua idade
 
     return render_template('mother.html' , name = name , age = age)
 
 
-# define the route to friends webpage
+# definia a rota para a página do amigo
 @app.route("/friend")
 def friend():
 
-    name = "Peter" # write your name
-    age = "12" # write your age
+    name = "Pedro" # escreva seu nome
+    age = "12" # escreva sua idade
 
     return render_template('friend.html' , name = name , age = age)
 
 
-# add other routes, if you want
+# adicione outras rotas, se você quiser
 
 
-# run the file
+# execute o arquivo
 if __name__  ==  '__main__':
     app.run(debug=True)
