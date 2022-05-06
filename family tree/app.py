@@ -33,7 +33,7 @@ def mother():
     return render_template('mother.html' , name = name , age = age)
 
 
-# definia a rota para a página do amigo
+# defina a rota para a página do amigo
 @app.route("/friend")
 def friend():
 
